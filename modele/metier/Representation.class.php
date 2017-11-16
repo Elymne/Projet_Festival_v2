@@ -14,8 +14,7 @@ namespace modele\metier;
  * @author ttnguyen
  */
 class Representation {
-    private $id;
-    
+
     private $id;
     
     private $groupe;
