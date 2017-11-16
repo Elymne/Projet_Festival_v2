@@ -17,7 +17,7 @@ $nbLieux = count($lesLieux);
 $lesRepresentations = RepresentationDAO::getAll();
 $nbRepresentations = count($lesRepresentations);
 
-echo"<h2 class=center>Programmes par jours</h2><br_/>";
+echo"<h2 class=center>Programme par jours</h2><br>";
 
 if ($nbGroupes != 0 && $nbLieux != 0 && $nbLieux != 0 ){
      
@@ -37,9 +37,9 @@ if ($nbGroupes != 0 && $nbLieux != 0 && $nbLieux != 0 ){
             echo "
          <tr class='enTeteTabQuad'>
             <td width='30%'>Lieu</td>
-            <td width='35%'>Groupe</td>
-            <td width='35%'>Heure Début</td>
-            <td width='30%'>HeureFin</td>
+            <td width='30%'>Groupe</td>
+            <td width='15%'>Heure Début</td>
+            <td width='15%'>HeureFin</td>
          </tr>";
         }
         
