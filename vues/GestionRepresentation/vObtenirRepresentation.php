@@ -19,7 +19,7 @@ $nbRepresentations = count($lesRepresentations);
 
 echo"<h2 class=center>Programme par jours</h2><br>";
 
-if ($nbGroupes != 0 && $nbLieux != 0 && $nbLieux != 0 ){
+if ($nbGroupes != 0 && $nbLieux != 0 ){
      
     // BOUCLE SUR LES Date de représentation
     $test = 0;
@@ -38,8 +38,8 @@ if ($nbGroupes != 0 && $nbLieux != 0 && $nbLieux != 0 ){
          <tr class='enTeteTabQuad'>
             <td width='30%'>Lieu</td>
             <td width='30%'>Groupe</td>
-            <td width='15%'>Heure Début</td>
-            <td width='15%'>HeureFin</td>
+            <td width='20%'>Heure Début</td>
+            <td width='20%'>HeureFin</td>
          </tr>";
         }
         
@@ -47,13 +47,13 @@ if ($nbGroupes != 0 && $nbLieux != 0 && $nbLieux != 0 ){
             <tr class='ligneTabQuad'>
             <td>".$uneRepresentation->getLieu()->getNom()."</td>
             <td>".$uneRepresentation->getGroupe()->getNom()."</td>
-            <td>".$uneRepresentation->getHeureDebut()."</td>
-            <td>".$uneRepresentation->getHeureFin()."</td>";
+            <td><center>".$uneRepresentation->getHeureDebut()."</center></td>
+            <td><center>".$uneRepresentation->getHeureFin()."</center></td>";
         
             if($test == 0){
                 $test = 1;
             }
     }
-    echo"</table><br>"; 
+     
         
 }
