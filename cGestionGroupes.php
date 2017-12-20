@@ -22,11 +22,8 @@ if (!isset($_REQUEST['action'])) {
 
 $action = $_REQUEST['action'];
 
-include("vues/GestionGroupes/vObtenirGroupes.php");
-
 // Aiguillage selon l'étape
-
-/*switch ($action) {
+switch ($action) {
     case 'initial' :
         include("vues/GestionGroupes/vObtenirGroupes.php");
         break;
@@ -57,29 +54,28 @@ include("vues/GestionGroupes/vObtenirGroupes.php");
         break;
 
     case 'validerCreerGrp':case 'validerModifierGrp':
-        $id = $enreg['ID'];
-        $nom = $enreg['NOM'];
-        $identite = $enreg['IDENTITERESPONSABLE'];
-        $adresse = $enreg['ADRESSEPOSTALE'];
-        $nbPers = $enreg['NOMBREPERSONNES'];
-        $nomPays = $enreg['NOMPAYS'];
-        $hebergement = $enreg['HEBERGEMENT'];
-        $unGroupe = new Groupe($id, $nom, $identite, $adresse, $nbPers, $nomPays, $hebergement);
+        $id = $_REQUEST['id'];
+        $nom = $_REQUEST['nom'];
+        $responsable = $_REQUEST['responsable'];
+        $adresse = $_REQUEST['adresse'];
+        $nbPers = $_REQUEST['nbPers'];
+        $nomPays = $_REQUEST['pays'];
+        $hebergement = $_REQUEST['hebergement'];
 
         if ($action == 'validerCreerGrp') {
-            verifierDonneesGrpC($id, $nom, $identite, $adresse, $nbPers, $nomPays, $hebergement);
+            verifierDonneesGrpC($id, $nom, $nbPer, $hebergement);
             if (nbErreurs() == 0) {
-                $unGroupe = new Groupe($id, $nom, $identite, $adresse, $nbPers, $nomPays, $hebergement);
+                $unGroupe = new Groupe($id, $nom, $responsable, $adresse, $nbPers, $nomPays, $hebergement);
                 GroupeDAO::insert($unGroupe);
                 include("vues/GestionGroupes/vObtenirGroupes.php");
             } else {
                 include("vues/GestionGroupes/vCreerModifierGroupe.php");
             }
         } else {
-            verifierDonneesGrpM($id, $nom, $identite, $adresse, $nbPers, $nomPays, $hebergement);
+            verifierDonneesGrpM($id, $nom, $nbPers, $hebergement);
             if (nbErreurs() == 0) {
-                $unGroupe = new Groupe($id, $nom, $identite, $adresse, $nbPers, $nomPays, $hebergement);
-                GroupeDAO::update($id, $unGroupe);
+                $unGroupe = new Groupe($id, $nom, $responsable, $adresse, $nbPers, $nomPays, $hebergement);
+                GroupeDAO::update($id, $unEtab);
                 include("vues/GestionGroupes/vObtenirGroupes.php");
             } else {
                 include("vues/GestionGroupes/vCreerModifierGroupe.php");
@@ -87,13 +83,12 @@ include("vues/GestionGroupes/vObtenirGroupes.php");
         }
         break;
 }
-*/
+
 // Fermeture de la connexion au serveur MySql
 Bdd::deconnecter();
 
-function verifierDonneesGrpC($id, $nom, $identite, $adresse, $nbPers, $nomPays, $hebergement) {
-    if ($id == "" || $nom == "" || $identite == "" || $adresse == "" ||
-            $nbPers == "" || $nomPays == "" || $hebergement == "") {
+function verifierDonneesGrpC($id, $nom,$nbPers, $hebergement) {
+    if ($id == "" || $nom == "" || $nbPers == "" || $hebergement == "") {
         ajouterErreur('Chaque champ suivi du caractère * est obligatoire');
     }
     if ($id != "") {
@@ -121,14 +116,8 @@ function verifierDonneesGrpC($id, $nom, $identite, $adresse, $nbPers, $nomPays, 
     
 }
     
-
-
-    
-   
-
-function verifierDonneesGrpM($id, $nom, $identite, $adresse, $nbPers, $nomPays, $hebergement) {
-    if ($id == "" || $nom == "" || $identite == "" || $adresse == "" ||
-            $nbPers == "" || $nomPays == "" || $hebergement == "") {
+function verifierDonneesGrpM($id, $nom, $nbPers, $hebergement) {
+    if ($id == "" || $nom == "" || $nbPers == "" || $hebergement == "") {
         ajouterErreur('Chaque champ suivi du caractère * est obligatoire');
     }
     if ($nom != "" && GroupeDAO::isAnExistingName(false, $id, $nom)) {

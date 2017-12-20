@@ -14,12 +14,15 @@ $unGroupe = GroupeDAO::getOneById($id);
 /* @var $unEtab Etablissement  */
 $nom = $unGroupe->getNom();
 echo "
+    <div class='container'>
+    <div class='jumbotron'>
 <br><center>Voulez-vous vraiment supprimer l'établissement $nom ?
 <h3><br>
 <a href='cGestionGroupes.php?action=validerSupprimerGroup&id=$id'>Oui</a>
 &nbsp; &nbsp; &nbsp; &nbsp;
 <a href='cGestionGroupes.php?'>Non</a></h3>
-</center>";
+</center>
+        </div></div>";
 
 include("includes/_fin.inc.php");
 

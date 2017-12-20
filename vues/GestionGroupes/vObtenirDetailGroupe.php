@@ -11,11 +11,11 @@ include("includes/_debut.inc.php");
 
 // OBTENIR LE DÉTAIL DU GROUPE SÉLECTIONNÉ
 
-$unGrp = GroupeDAO::getOneById('g002');
+$unGrp = GroupeDAO::getOneById($id);
 /* @var $unGrp Groupe  */
 $id= $unGrp->getId();
 $nom = $unGrp->getNom();
-$identite = $unGrp->getIdentite();
+$identite = $unGrp->getResponsable();
 $adresse = $unGrp->getAdresse();
 $nbPers = $unGrp->getNbPers();
 $pays = $unGrp->getNomPays();
@@ -24,7 +24,9 @@ $hebergement = $unGrp->getHebergement();
 
 echo "
 <br>
-<table width='60%' cellspacing='0' cellpadding='0' class='tabNonQuadrille'>
+<div class='container'>
+    <div class='jumbotron'>
+<table width='60%' cellspacing='0' cellpadding='0' class='table table-bordered'>
    
    <tr class='enTeteTabNonQuad'>
       <td colspan='3'><strong>ID : $id</strong></td>
@@ -54,8 +56,9 @@ echo "
       <td>$hebergement</td>
    </tr>
 </table>
+<a class='btn btn-primary' href='cGestionGroupes.php' role='button'>Retour</a>
 <br>
-<a href='cGestionGroupes.php'>Retour</a>";
+</div>";
 
 include("includes/_fin.inc.php");
 

@@ -32,9 +32,10 @@ $i = 0;
 $nom = $unEtab->getNom();
 
 // AFFICHAGE DU NOM DE L'ÉTABLISSEMENT
-echo "<br><strong>$nom</strong><br><br>
-      
-   <table width='45%' cellspacing='0' cellpadding='0' class='tabQuadrille'>";
+echo "<br><h4 style='color:white';>$nom</h4>
+   <div class='jumbotron'>
+   
+   <table width='45%' cellspacing='0' cellpadding='0' class='table'>";
 
 // AFFICHAGE DE LA LIGNE D'EN-TÊTE
 echo "
@@ -109,7 +110,8 @@ echo "
          </td>
       </tr>
    </table>
-   <a href='cOffreHebergement.php?'>Retour</a>
+   </div>
+   <a class='btn btn-primary btn-block' href='cOffreHebergement.php?' role='button'>Retour</a>
 </form>";
 
 include("includes/_fin.inc.php");

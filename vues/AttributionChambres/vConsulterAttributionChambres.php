@@ -18,8 +18,10 @@ $lesEtabOffrantChambres = EtablissementDAO::getAllOfferingRooms();
 $nbEtabOffrantChambres = count($lesEtabOffrantChambres);
 if ($nbEtabOffrantChambres != 0) {
     echo "
-   <center> <a href='cAttributionChambres.php?action=demanderModifierAttrib'>
-   Effectuer ou modifier les attributions</a> <br> <br>";
+        <a class='btn btn-primary btn-block' href='cAttributionChambres.php?action=demanderModifierAttrib' role='button'>Effectuer ou modifier les attributions</a>
+        <h2><br_/><br_/></h2>
+    </div>";
+    
 
     // POUR CHAQUE ÉTABLISSEMENT : AFFICHAGE D'UN TABLEAU COMPORTANT 2 LIGNES 
     // D'EN-TÊTE (LIGNE NOM ET LIGNE DISPONIBILITÉS) ET LE DÉTAIL DES ATTRIBUTIONS
@@ -40,18 +42,21 @@ if ($nbEtabOffrantChambres != 0) {
         $nomEtab = $unEtab->getNom();
 
         echo "
-      <table width='70%' cellspacing='0' cellpadding='0' class='tabQuadrille'>";
+       <div class='container'>
+       <div class='jumbotron'>
+      <table width='70%' cellspacing='0' cellpadding='0' class='table table-bordered'>
+      ";
 
         // AFFICHAGE DE LA 1ÈRE LIGNE D'EN-TÊTE
         echo "
-         <tr class='enTeteTabQuad'>
+         <tr>
             <td colspan='$nbCol'><strong>$nomEtab</strong></td>
          </tr>";
 
         // AFFICHAGE DE LA 2ÈME LIGNE D'EN-TÊTE : 1 LIT : NOMBRE DE CHAMBRES 
         // DISPONIBLES, 2 À 3 LITS : NOMBRE DE CHAMBRES DISPONIBLES...  
         echo "
-         <tr class='enTete2TabQuad'>
+         <tr>
       
             <td width='35%'><i>Disponibilités</i></td>";
 
@@ -74,7 +79,7 @@ if ($nbEtabOffrantChambres != 0) {
             $idGroupe = $unGroupe->getId();
             $nomGroupe = $unGroupe->getNom();
             echo "
-            <tr class='ligneTabQuad'>
+            <tr>
                <td width='35%'>&nbsp;$nomGroupe</td>";
 
             // BOUCLE SUR LES TYPES DE CHAMBRES (CHAQUE TYPE DE CHAMBRE 
@@ -98,7 +103,8 @@ if ($nbEtabOffrantChambres != 0) {
         } // Fin de la boucle sur les groupes
         echo "
       </table>
-      <br>";
+      <br>
+      </div>";
     } // Fin de la boucle sur les établissements
 }
 

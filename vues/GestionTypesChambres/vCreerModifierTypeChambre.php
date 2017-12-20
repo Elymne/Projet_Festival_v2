@@ -31,10 +31,11 @@ if ($action == 'demanderCreerTypeChambre' || $action == 'validerCreerTypeChambre
 }
 
 echo "
+    <div class='jumbotron'>
 <form method='POST' action='cGestionTypesChambres.php'>
    <input type='hidden' value='$action' name='action'>
    <br>
-   <table width='40%' cellspacing='0' cellpadding='0' class='tabNonQuadrille'>
+   <table width='40%' cellspacing='0' cellpadding='0' class='table table-bordered'>
    
       <tr class='enTeteTabNonQuad'>
          <td colspan='3'><strong>$message</strong></td>
@@ -73,8 +74,10 @@ echo "
          </td>
       </tr>
    </table>
-   <a href='cGestionTypesChambres.php'>Retour</a>
-</form>";
+   <p><br_/><br_/></p>
+   <a class='btn btn-primary' href='cGestionTypesChambres.php' role='button'>Retour</a>
+</form>
+</div>";
 
 include("includes/_fin.inc.php");
 

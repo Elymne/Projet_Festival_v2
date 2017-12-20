@@ -21,7 +21,7 @@ class Groupe {
      * nom du responsable du groupe
      * @var string 
      */
-    private $identite;
+    private $responsable;
     /**
      * adresse du groupe
      * @var string
@@ -43,10 +43,10 @@ class Groupe {
      */
     private $hebergement;
 
-    function __construct($id, $nom, $identite, $adresse, $nbPers, $nomPays, $hebergement) {
+    function __construct($id, $nom, $responsable, $adresse, $nbPers, $nomPays, $hebergement) {
         $this->id = $id;
         $this->nom = $nom;
-        $this->identite = $identite;
+        $this->responsable = $responsable;
         $this->adresse = $adresse;
         $this->nbPers = $nbPers;
         $this->nomPays = $nomPays;
@@ -61,8 +61,8 @@ class Groupe {
         return $this->nom;
     }
 
-    function getIdentite() {
-        return $this->identite;
+    function getResponsable() {
+        return $this->responsable;
     }
 
     function getAdresse() {
@@ -89,8 +89,8 @@ class Groupe {
         $this->nom = $nom;
     }
 
-    function setIdentite($identite) {
-        $this->identite = $identite;
+    function setResponsable($responsable) {
+        $this->responsable = $responsable;
     }
 
     function setAdresse($adresse) {

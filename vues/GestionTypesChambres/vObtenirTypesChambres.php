@@ -12,8 +12,11 @@ include("includes/_debut.inc.php");
 
 echo "
 <br>
-<table width='40%' cellspacing='0' cellpadding='0' class='tabNonQuadrille'>
+<div class='jumbotron'>
+<table width='40%' cellspacing='0' cellpadding='0' class='table table-bordered'>
+
    <tr class='enTeteTabNonQuad'>
+   
       <td colspan='4'><strong>Types de chambres</strong></td>
    </tr>";
 $lesTypesChambres = TypeChambreDAO::getAll();
@@ -47,9 +50,9 @@ foreach ($lesTypesChambres as $unTypeChambre) {
     </tr>";
 }
 echo "    
-</table><br>
-<a href='cGestionTypesChambres.php?action=demanderCreerTypeChambre'>
-Création d'un type de chambre</a>";
+</table>
+<a class='btn btn-primary btn-block' href='cGestionTypesChambres.php?action=demanderCreerTypeChambre' role='button'>demanderCreerTypeChambre</a>
+</div><br>";
 
 include("includes/_fin.inc.php");
 

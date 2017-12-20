@@ -17,7 +17,12 @@ $nbLieux = count($lesLieux);
 $lesRepresentations = RepresentationDAO::getAll();
 $nbRepresentations = count($lesRepresentations);
 
-echo"<h2 class=center>Programme par jours</h2><br>";
+echo"<div class='page-header'>
+    <h1 style='color:white';>Representation</h1>
+   </div>
+   <div class='container'>
+    <div class='jumbotron'>
+    ";
 
 if ($nbGroupes != 0 && $nbLieux != 0 ){
      
@@ -33,7 +38,7 @@ if ($nbGroupes != 0 && $nbLieux != 0 ){
             }
             $dateTest = $dateRepresentation;
             echo "<strong>$dateRepresentation</strong><br>
-         <table width='45%' cellspacing='0' cellpadding='0' class='tabQuadrille'>";
+         <table width='45%' cellspacing='0' cellpadding='0' class='table table-bordered'>";
             echo "
          <tr class='enTeteTabQuad'>
             <td width='30%'>Lieu</td>

@@ -13,11 +13,14 @@ include("includes/_debut.inc.php");
 
 echo "
 <br>
-<table width='55%' cellspacing='0' cellpadding='0' class='tabNonQuadrille'>
-
-   <tr class='enTeteTabNonQuad'>
-      <td colspan='4'><strong>Etablissements</strong></td>
-   </tr>";
+<div class='container'>
+<div class='jumbotron''>
+<table width='55%' cellspacing='0' cellpadding='0' class='table table-bordered'>
+    <thead class='thead-default'>
+        <tr>
+            <td colspan='4'><strong>Etablissements</strong></td>
+        </tr>
+    </thread>";
 
 $lesEtablissements = EtablissementDAO::getAll();
 // BOUCLE SUR LES ÉTABLISSEMENTS
@@ -25,7 +28,7 @@ foreach ($lesEtablissements as $unEtablissement) {
     $id = $unEtablissement->getId();
     $nom = $unEtablissement->getNom();
     echo "
-		<tr class='ligneTabNonQuad'>
+		<tr>
          <td width='52%'>$nom</td>
          
          <td width='16%' align='center'> 
@@ -55,8 +58,10 @@ foreach ($lesEtablissements as $unEtablissement) {
 echo "
 </table>
 <br>
-<a href='cGestionEtablissements.php?action=demanderCreerEtab'>
-Création d'un établissement</a >";
+<a class='btn btn-primary btn-block' href='cGestionEtablissements.php?action=demanderCreerEtab' role='button'>Création d'un établissement</a>
+</div>
+</div>
+<br>";
 
 include("includes/_fin.inc.php");
 

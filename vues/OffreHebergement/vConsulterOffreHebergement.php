@@ -27,11 +27,13 @@ if ($nbEtab != 0 && $nbTypesChambres != 0) {
 
         // AFFICHAGE DU NOM DE L'ÉTABLISSEMENT ET D'UN LIEN VERS LE FORMULAIRE DE
         // MODIFICATION
-            echo "<strong>$nom</strong><br>
-      <a href='cOffreHebergement.php?action=demanderModifierOffre&idEtab=$idEtab'>
-      Modifier</a>
-   
-      <table width='45%' cellspacing='0' cellpadding='0' class='tabQuadrille'>";
+            echo "
+                <div class='jumbotron'>
+      <h4>$nom</strong></h4>
+          <h1><br_/><br_/><br_/></h1>
+      <a class='btn btn-primary' href='cOffreHebergement.php?action=demanderModifierOffre&idEtab=$idEtab' role='button'>Modifier</a>
+          <h1><br_/><br_/><br_/></h1>
+      <table width='45%' cellspacing='0' cellpadding='0' class='table table-bordered'>";
 
         // AFFICHAGE DE LA LIGNE D'EN-TÊTE
         echo "
@@ -64,7 +66,8 @@ if ($nbEtab != 0 && $nbTypesChambres != 0) {
             </tr>";
         }
         echo "
-      </table><br>";
+      </table><br>
+      </div>";
     }
 }
 

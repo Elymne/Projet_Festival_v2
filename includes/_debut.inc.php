@@ -4,44 +4,39 @@
         <title>Festival</title>
         <meta http-equiv="Content-Language" content="fr">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link href="css/cssGeneral.css" rel="stylesheet" type="text/css">
-        <link href="css/cssOnglets.css" rel="stylesheet" type="text/css">
+        
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/main.css" rel="stylesheet">
+              
     </head>
-    <body class='basePage'>
-        <div style="text-align:right;">v. 2017</div>
-        <!--  Tableau contenant le titre et les menus -->
-        <table width="100%" cellpadding="0" cellspacing="0">
-            <!-- Titre -->
-            <tr> 
-                <td class="titre">Festival Folklores du Monde <br>
-                    <span id="texteNiveau2" class="texteNiveau2">
-                        H&eacute;bergement des groupes</span><br>&nbsp;
-                </td>
-            </tr>
-            <!-- Menus -->
-            <tr> 
-                <td>
-                    <!-- On inclut le fichier de gestion des onglets ; si on a des 
-                    menus traditionnels, il faudra inclure le fichier adéquat -->
-                    <?php include("_onglets.inc.php"); ?>
-
-                    <div id='barreMenus'>
-                        <ul class='menus'>
-                            <?php construireMenu("Accueil", "index.php", 1); ?>
-                            <?php construireMenu("Consultation Groupes", "cGestionGroupes.php", 6); ?>
-                            <?php construireMenu("Gestion établissements", "cGestionEtablissements.php", 2); ?>
-                            <?php construireMenu("Gestion types chambres", "cGestionTypesChambres.php", 3); ?>
-                            <?php construireMenu("Offre hébergement", "cOffreHebergement.php", 4); ?>
-                            <?php construireMenu("Attribution chambres", "cAttributionChambres.php", 5); ?> 
-                            <?php construireMenu("Gestion Représentation", "cGestionRepresentation.php", 6); ?>
-                        </ul>
-                    </div>
-
-                </td>
-            </tr>
-            <!-- Fin des menus -->
-            <tr>
-                <td class="basePage">
-                    <br><center><br>
-
-
+    
+    <body style="background-image: url('images/background.JPG'); background-attachment: fixed;">
+        
+        <div class="container">
+ 
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand" href="index.php">Festival Folklores du Monde</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="cGestionRepresentation.php">Représentation</a></li>
+              <li><a href="cGestionGroupes.php">Groupe</a></li>
+              <li><a href="cGestionEtablissements.php">Etablissements</a></li>
+              <li><a href="cGestionTypesChambres.php">types chambres</a></li>
+              <li><a href="cOffreHebergement.php">Offre Hebergement</a></li>
+              <li><a href="cAttributionChambres.php">Attribution chambres</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>

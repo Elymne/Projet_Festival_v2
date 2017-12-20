@@ -35,18 +35,21 @@ $nbCol = ($nbEtabOffrantChambres * $nbTypesChambres) + 1;
 
 echo "
 <br>
-<table width='90%' cellspacing='0' cellpadding='0' class='tabQuadrille'>";
+<div class='container'>
+ <div class='jumbotron'>
+<table width='90%' cellspacing='0' cellpadding='0' class='table table-bordered'>";
 
 // AFFICHAGE DE LA 1ÈRE LIGNE D'EN-TÊTE
 echo "
-   <tr class='enTeteTabQuad'>
+   <tr>
       <td  colspan='$nbCol'><strong>
       Effectuer ou modifier les attributions</strong></td>
    </tr>";
 
 // AFFICHAGE DE LA 2ÈME LIGNE D'EN-TÊTE (ÉTABLISSEMENTS)
 echo "
-   <tr class='ligneTabQuad'>
+   <tr>
+   
       <td rowspan='2'>&nbsp;</td>";
 
 // BOUCLE SUR LES ÉTABLISSEMENTS
@@ -64,7 +67,9 @@ echo "
 
 // AFFICHAGE DE LA 3ÈME LIGNE D'EN-TÊTE (LIGNE AVEC C1, C2, ..., C1, C2, ...)
 echo "
-   <tr class='ligneTabQuad'>";
+   <tr>
+   </div>
+   </div>";
 
 // BOUCLE BASÉE SUR LE CRITÈRE ÉTABLISSEMENT 
 foreach ($lesEtabOffrantChambres as $unEtab) {
@@ -218,8 +223,14 @@ echo "
       <td class='libre' height='10'>&nbsp;</td>
       <td width='21%' align='left'>Nombre de places encore disponibles</td>
    </tr>
-</table>";
-echo "<br><center><a href='cAttributionChambres.php'>Retour</a></center>";
+</table>
+</div>
+</div>
+<h1><br_/><br_/><br_/><br_/><br_/></h1>";
+
+echo "<br><center><a class='btn btn-primary btn-block' href='cAttributionChambres.php' role='button'>Revenir aux consultations</a>
+<h1><br_><br_><br_><br_><br_></h1> "
+;
 
 include("includes/_fin.inc.php");
 

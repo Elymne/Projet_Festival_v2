@@ -27,7 +27,9 @@ $prenomResponsable = $unEtab->getPrenomResp();
 
 echo "
 <br>
-<table width='60%' cellspacing='0' cellpadding='0' class='tabNonQuadrille'>
+<div class='container'>
+<div class='jumbotron'>
+<table width='60%' cellspacing='0' cellpadding='0' class='table table-bordered'>
    
    <tr class='enTeteTabNonQuad'>
       <td colspan='3'><strong>$nom</strong></td>
@@ -72,7 +74,9 @@ echo "
    </tr> 
 </table>
 <br>
-<a href='cGestionEtablissements.php'>Retour</a>";
+<a class='btn btn-primary btn-block' href='cGestionEtablissements.php' role='button'>Retour</a>
+</div>
+</div>";
 
 include("includes/_fin.inc.php");
 
