@@ -17,7 +17,7 @@ echo "
 
    <tr class='enTeteTabNonQuad'>
    
-      <td colspan='4'><strong>Types de chambres</strong></td>
+      <th colspan='4'><strong>Types de chambres</strong></th>
    </tr>";
 $lesTypesChambres = TypeChambreDAO::getAll();
 

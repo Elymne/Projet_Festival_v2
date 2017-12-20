@@ -20,7 +20,7 @@ echo "
 <table width='55%' cellspacing='0' cellpadding='0' class='table table-bordered' style='color=white'>
 
    <tr class='enTeteTabNonQuad'>
-      <td colspan='4'><strong>Groupes</strong></td>
+      <th colspan='4'><strong>Groupes</strong></th>
    </tr>";
 
 $lesGroupes = GroupeDAO::getAll();

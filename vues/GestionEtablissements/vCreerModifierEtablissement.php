@@ -68,7 +68,7 @@ echo "
    <table width='85%' cellspacing='0' cellpadding='0' class='table table-bordered'>
    
       <tr class='enTeteTabNonQuad'>
-         <td colspan='3'><strong>$message</strong></td>
+         <th colspan='3'><strong>$message</strong></th>
       </tr>";
 
 // En cas de création, l'id est accessible sinon l'id est dans un champ

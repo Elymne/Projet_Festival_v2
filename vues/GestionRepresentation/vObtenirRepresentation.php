@@ -41,10 +41,10 @@ if ($nbGroupes != 0 && $nbLieux != 0 ){
          <table width='45%' cellspacing='0' cellpadding='0' class='table table-bordered'>";
             echo "
          <tr class='enTeteTabQuad'>
-            <td width='30%'>Lieu</td>
-            <td width='30%'>Groupe</td>
-            <td width='20%'>Heure Début</td>
-            <td width='20%'>HeureFin</td>
+            <th width='30%'>Lieu</th>
+            <th width='30%'>Groupe</th>
+            <th width='20%'>Heure Début</th>
+            <th width='20%'>HeureFin</th>
          </tr>";
         }
         

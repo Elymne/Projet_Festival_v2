@@ -38,9 +38,9 @@ if ($nbEtab != 0 && $nbTypesChambres != 0) {
         // AFFICHAGE DE LA LIGNE D'EN-TÊTE
         echo "
          <tr class='enTeteTabQuad'>
-            <td width='30%'>Type</td>
-            <td width='35%'>Capacité</td>
-            <td width='35%'>Nombre de chambres</td> 
+            <th width='30%'>Type</th>
+            <th width='35%'>Capacité</th>
+            <th width='35%'>Nombre de chambres</th> 
          </tr>";
 
         // BOUCLE SUR LES TYPES DE CHAMBRES (AFFICHAGE D'UNE LIGNE PAR TYPE DE 

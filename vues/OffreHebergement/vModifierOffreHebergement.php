@@ -40,9 +40,9 @@ echo "<br><h4 style='color:white';>$nom</h4>
 // AFFICHAGE DE LA LIGNE D'EN-TÊTE
 echo "
       <tr class='enTeteTabQuad'>
-         <td width='30%'>Type</td>
-         <td width='37%'>Capacité</td>
-         <td width='33%'>Nombre de chambres</td> 
+         <th width='30%'>Type</th>
+         <th width='37%'>Capacité</th>
+         <th width='33%'>Nombre de chambres</th> 
       </tr>";
 
 $lesTypesChambres = TypeChambreDAO::getAll();

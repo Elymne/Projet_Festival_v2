@@ -18,7 +18,7 @@ echo "
 <table width='55%' cellspacing='0' cellpadding='0' class='table table-bordered'>
     <thead class='thead-default'>
         <tr>
-            <td colspan='4'><strong>Etablissements</strong></td>
+            <th colspan='4'><strong>Etablissements</strong></th>
         </tr>
     </thread>";
 

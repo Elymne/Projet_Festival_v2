@@ -12,7 +12,7 @@
               
     </head>
     
-    <body style="background-image: url('images/background.JPG'); background-attachment: fixed;">
+    <body style="background-image: url('images/background.jpg'); background-attachment: fixed;">
         
         <div class="container">
  

@@ -50,7 +50,7 @@ if ($nbEtabOffrantChambres != 0) {
         // AFFICHAGE DE LA 1ÈRE LIGNE D'EN-TÊTE
         echo "
          <tr>
-            <td colspan='$nbCol'><strong>$nomEtab</strong></td>
+            <th colspan='$nbCol'><strong>$nomEtab</strong></th>
          </tr>";
 
         // AFFICHAGE DE LA 2ÈME LIGNE D'EN-TÊTE : 1 LIT : NOMBRE DE CHAMBRES 
